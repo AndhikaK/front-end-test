@@ -17,6 +17,12 @@
 
 @font-face {
   font-family: "Gilroy";
+  src: URL("assets/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gilroy";
   src: URL("assets/fonts/Gilroy-Bold.ttf") format("truetype");
   font-weight: bold;
 }
@@ -164,13 +170,68 @@ body {
   font-size: 0.9rem;
 }
 
-.section-2 .content .content-item .more {
+.section-2 .content .content-item .more,
+.section-4 .more {
   color: var(--accent-color);
+  font-size: 0.9;
 }
 
-.section-2 .content .content-item .more img {
+.section-2 .content .content-item .more img,
+.section-4 .more img {
   margin-left: 8px;
 }
+/* --------------------------------------------------------------------- */
+
+.section-4 {
+  padding: 128px 64px;
+  display: grid;
+  row-gap: 360px;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.section-4 .catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-content: center;
+}
+
+.section-4 .catalog .detail {
+  display: grid;
+  gap: 24px;
+}
+
+.section-4 .catalog .detail .type {
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section-4 .catalog .detail .title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.section-4 .catalog .views {
+  position: relative;
+}
+
+.section-4 .catalog .views img {
+  position: absolute;
+  top: -25%;
+  width: 130%;
+}
+
+.section-4 .catalog-1 .views img {
+  right: 0;
+}
+
+.section-4 .catalog-2 .views img {
+  left: 0;
+}
+
 /* --------------------------------------------------------------------- */
 
 footer {
