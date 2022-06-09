@@ -1,0 +1,243 @@
+:root {
+  --dark-text: #1e1e1e;
+  --light-text: #ffffff;
+  --accent-color: #f6973f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: URL("assets/fonts/Gilroy-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: URL("assets/fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+body {
+  position: relative;
+  font-family: "Gilroy", sans-serif;
+  color: var(--dark-text);
+}
+
+/* --------------------------------------------------------------------- */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  color: var(--light-text);
+  padding: 16px 64px;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .nav-wrapper {
+  display: flex;
+  gap: 32px;
+}
+
+.navbar .cart {
+  position: relative;
+}
+
+.navbar .cart .cart-count {
+  position: absolute;
+  top: -0.4rem;
+  right: -0.4rem;
+  height: 1rem;
+  width: 1rem;
+  display: grid;
+  place-items: center;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  font-size: 0.7rem;
+}
+
+/* --------------------------------------------------------------------- */
+
+.section-1 {
+  position: relative;
+  height: fit-content;
+  background-size: cover;
+}
+
+.section-1 .bg {
+  width: 100%;
+  z-index: -100;
+}
+
+.section-1 .content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.section-1 .content h1 {
+  font-size: 80px;
+  text-transform: capitalize;
+}
+
+.section-1 .content p {
+  margin-top: 32px;
+  color: #ffffff;
+}
+
+.section-1 .content .search {
+  margin-top: 32px;
+  display: grid;
+  place-items: center;
+}
+
+.section-1 .content .search .search-component {
+  width: 300px;
+  background-color: rgb(255, 255, 255, 0.15);
+  border-radius: 500px;
+  padding: 4px;
+  border: 2px solid rgb(255, 255, 255, 0.6);
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.section-1 .content .search .search-component input {
+  background-color: transparent;
+  border: transparent;
+  padding: 0 16px;
+  color: #ffffff;
+}
+.section-1 .content .search .search-component input:focus {
+  outline: transparent;
+}
+.section-1 .content .search .search-component button {
+  background-color: #e58411;
+  border: transparent;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+/* --------------------------------------------------------------------- */
+
+.section-2 {
+  padding: 128px 64px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+
+.section-2 .section-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.section-2 .content {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.section-2 .content .content-item {
+  display: grid;
+  gap: 16px;
+}
+
+.section-2 .content .content-item .description {
+  font-size: 0.9rem;
+}
+
+.section-2 .content .content-item .more {
+  color: var(--accent-color);
+}
+
+.section-2 .content .content-item .more img {
+  margin-left: 8px;
+}
+/* --------------------------------------------------------------------- */
+
+footer {
+  background-color: #f7f7f7;
+  padding: 32px 64px;
+}
+
+footer .footer-1 {
+  padding: 32px 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  gap: 32px;
+}
+
+footer .footer-1 .company .name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+footer .footer-1 .links {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+footer .footer-1 .links .link-item {
+  display: grid;
+  gap: 16px;
+}
+
+footer .footer-1 .links .link-item .title {
+  color: var(--accent-color);
+}
+
+footer .footer-1 .links .link-item .links-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+footer .footer-1 .links .link-item .links-wrapper .link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: var(--dark-text);
+}
+
+footer .footer-1 .links .link-item .links-wrapper .link:hover {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+footer .footer-1 .links .link-item .links-wrapper .link .icon {
+  width: 2.1rem;
+  text-align: center;
+}
+
+footer .footer-2 {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-2 .term {
+  display: flex;
+  gap: 16px;
+}
