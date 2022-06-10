@@ -336,18 +336,19 @@
     display: grid;
     row-gap: 360px;
     height: fit-content;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .section-4 .catalog {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
+    /* grid-template-columns: 1fr 1fr; */
+    /* gap: 64px; */
     align-content: center;
   }
 
   .section-4 .catalog .detail {
     display: grid;
+    margin-bottom: 32px;
     gap: 24px;
   }
 
@@ -368,7 +369,7 @@
   }
 
   .section-4 .catalog .views img {
-    position: absolute;
+    /* position: absolute; */
     top: -25%;
     width: 130%;
   }
